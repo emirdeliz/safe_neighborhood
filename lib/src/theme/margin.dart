@@ -1,4 +1,4 @@
-class MarginCustom {
+class Margin {
   static const double none = 0;
   static const double xSmall = 5;
   static const double small = 15;

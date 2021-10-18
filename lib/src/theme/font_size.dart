@@ -1,4 +1,4 @@
-class FontSizeCustom {
+class FontSize {
   static const double xxSmall = 8;
   static const double xSmall = 10;
   static const double small = 15;

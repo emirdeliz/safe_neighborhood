@@ -1,33 +1,47 @@
 import 'package:flutter/material.dart';
 
-///
-/// Solid color system
-/// consists of solid colors, without transparency
-///
-/// used for main solid colors
-const darwinPrimaryDark = Color(0xff161849);
-const darwinPrimary = Color(0xff2026d2);
-const darwinAccent = Color(0xff62e1fc);
-const darwinSecondary = Color(0xfff34d77);
-const darwinSuccess = Color(0xff4aa740);
-const darwinSuccessLight = Color(0xffe6f4e9);
-const darwinWarning = Color(0xffff8212);
-const darwinWarningLight = Color(0xffffecdc);
-const darwinInfo = Color(0xff3eacfc);
-const darwinInfoLight = Color(0xffe8f0fd);
-const darwinDanger = Color(0xfff64a4a);
-const darwinDangerLight = Color(0xfffce8e6);
-const darwinWhite = Color(0xffffffff);
-const darwinGray = Color(0xffc2c7cf);
-const darwinBlack = Color(0xff000000);
+class DarkColor {
+  static const Color black = Color(0xff2c2c2c);
+  static const Color white = Color(0xffffffff);
+  static const Color red = Color(0xffc25343);
+  static const Color weakRed = Color(0xffff9791);
+  static const Color yellow = Color(0xfff5d87d);
+  static const Color green = Color(0xffa0da8c);
+  static const Color strongGreen = Color(0xff5a7e68);
+  static const Color p1 = Color(0xff3e4651);
+  static const Color p2 = Color(0xff386d82);
+  static const Color p3 = Color(0xffccc1b4);
+  static const Color p4 = Color(0xffe5e5e5);
+  static const Color s1 = Color(0xff54402d);
+  static const Color s2 = Color(0xff9fbbc4);
+  static const Color s3 = Color(0xff4d555f);
+  static const Color s4 = Color(0xff71777f);
+  static const Color n1 = Color(0xff58595b);
+  static const Color n2 = Color(0xff696a6b);
+  static const Color n3 = Color(0xffbcbdbd);
+  static const Color n4 = Color(0xffeeeeef);
+  static const Color n5 = Color(0xfff9f9f9);
+}
 
-///
-/// Alpha color system
-/// consists of light colors, with transparency
-///
-/// generally used for shadows
-const darwinPrimaryDarkShadow = Color.fromRGBO(22, 24, 73, 0.2);
-const darwinWarningShadow = Color.fromRGBO(255, 130, 18, 0.45);
-const darwinSuccessShadow = Color.fromRGBO(74, 167, 64, 0.45);
-const darwinDangerShadow = Color.fromRGBO(246, 74, 74, 0.45);
-const darwinInfoShadow = Color.fromRGBO(62, 172, 252, 0.45);
+class LightColor {
+  static const Color black = Color(0xff2c2c2c);
+  static const Color white = Color(0xffffffff);
+  static const Color red = Color(0xffc25343);
+  static const Color weakRed = Color(0xffff9791);
+  static const Color yellow = Color(0xfff5d87d);
+  static const Color green = Color(0xffa0da8c);
+  static const Color strongGreen = Color(0xff5a7e68);
+  static const Color p1 = Color(0xff3e4651);
+  static const Color p2 = Color(0xff386d82);
+  static const Color p3 = Color(0xffccc1b4);
+  static const Color p4 = Color(0xffe5e5e5);
+  static const Color s1 = Color(0xff54402d);
+  static const Color s2 = Color(0xff9fbbc4);
+  static const Color s3 = Color(0xff4d555f);
+  static const Color s4 = Color(0xff71777f);
+  static const Color n1 = Color(0xff58595b);
+  static const Color n2 = Color(0xff696a6b);
+  static const Color n3 = Color(0xffbcbdbd);
+  static const Color n4 = Color(0xffeeeeef);
+  static const Color n5 = Color(0xfff9f9f9);
+}

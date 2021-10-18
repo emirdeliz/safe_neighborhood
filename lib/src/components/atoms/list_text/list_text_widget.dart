@@ -1,5 +1,4 @@
 import 'package:safe_neighborhood/app/shared/config/padding_custom.dart';
-import 'package:safe_neighborhood/app/shared/widgets/padding_container/padding_container_widget.dart';
 import 'package:flutter/material.dart';
 
 class ListTextWidget extends StatelessWidget {

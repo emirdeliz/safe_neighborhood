@@ -1,4 +1,4 @@
-class PaddingCustom {
+class Padding {
   static const double none = 0;
   static const double xxSmall = 2;
   static const double xSmall = 5;

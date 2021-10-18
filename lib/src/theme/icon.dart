@@ -18,7 +18,7 @@ import 'package:flutter/widgets.dart';
 ///
 /// Main Icon Font Class
 ///
-/// used for custom icons
+/// used for  icons
 class DarwinFont {
   DarwinFont._();
 

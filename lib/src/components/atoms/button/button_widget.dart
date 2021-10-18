@@ -1,107 +1,106 @@
 import 'package:flutter/material.dart';
+import 'package:safe_neighborhood/src/components/atoms/text/text_widget.dart';
 
-enum EButtonType {
+enum ButtonType {
   primary,
   secondary,
-  outline_primary,
-  outline_secondary,
-  outline_tertiary
+  outlinePrimary,
+  outlineSecondary,
+  outlineTertiary
 }
 
-enum EButtonSize { small, normal, large }
+enum ButtonSize { small, normal, large }
 
 class ButtonProps {
   Color color;
   Color textColor;
-  EButtonSize size;
-  ButtonProps(this.color, this.textColor);
+  ButtonSize size;
+  ButtonProps(this.color, this.textColor, this.size);
 }
 
 class ButtonWidget extends StatelessWidget {
-  final String title;
-  final EButtonType type;
-  final EButtonSize size;
-  final Function onPressed;
+  final String child;
+  final ButtonType type;
+  final ButtonSize size;
+  final void Function()? onPressed;
 
-  const ButtonWidget(
-      {Key key,
-      @required this.title,
-      @required this.onPressed,
-      this.type = EButtonType.primary,
-      this.size = EButtonSize.normal})
+  const ButtonWidget(this.child, this.onPressed,
+      {Key? key, this.type = ButtonType.primary, this.size = ButtonSize.normal})
       : super(key: key);
 
-  ButtonProps _buildButtonProps() {
-    switch (this.type) {
-      case EButtonType.outline_tertiary:
-        return new ButtonProps(
-          Color.buttonTertiaryBgColor,
-          Color.buttonTertiaryTextColor,
-        );
-      case EButtonType.secondary:
-      case EButtonType.outline_secondary:
-        return new ButtonProps(
-            Color.buttonSecondaryBgColor, Color.buttonSecondaryTextColor);
-      case EButtonType.primary:
-      case EButtonType.outline_primary:
-      default:
-        {
-          return new ButtonProps(
-              Color.buttonPrimaryBgColor, Color.buttonPrimaryTextColor);
-        }
-    }
-  }
+  // ButtonProps _buildButtonProps() {
+  //   switch (this.type) {
+  //     case ButtonType.outlineTertiary:
+  //       return new ButtonProps(
+  //         Color.buttonTertiaryBgColor,
+  //         Color.buttonTertiaryTextColor,
+  //       );
+  //     case ButtonType.secondary:
+  //     case ButtonType.outline_secondary:
+  //       return new ButtonProps(
+  //           Color.buttonSecondaryBgColor, Color.buttonSecondaryTextColor);
+  //     case ButtonType.primary:
+  //     case ButtonType.outline_primary:
+  //     default:
+  //       {
+  //         return new ButtonProps(
+  //             Color.buttonPrimaryBgColor, Color.buttonPrimaryTextColor);
+  //       }
+  //   }
+  // }
 
-  RaisedButton _buildButton(ButtonProps props) {
-    return (RaisedButton(
-      padding: this._buildButtonPadding(),
-      color: props.color,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(BorderRadiusCustom.normal),
-      ),
-      child: TextWidget(this.title,
-          color: props.textColor, fontSize: FontSizeCustom.normal),
-      onPressed: this.onPressed,
-    ));
-  }
+  // RaisedButton _buildButton(ButtonProps props) {
+  //   return (RaisedButton(
+  //     padding: this._buildButtonPadding(),
+  //     color: props.color,
+  //     shape: RoundedRectangleBorder(
+  //       borderRadius: BorderRadius.circular(BorderRadiusCustom.normal),
+  //     ),
+  //     child: TextWidget(this.title,
+  //         color: props.textColor, fontSize: FontSizeCustom.normal),
+  //     onPressed: this.onPressed,
+  //   ));
+  // }
 
-  RaisedButton _buildButtonOutline(ButtonProps props) {
-    return (RaisedButton(
-      padding: this._buildButtonPadding(),
-      color: Colors.transparent,
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(BorderRadiusCustom.normal),
-          side: BorderSide(color: props.color)),
-      child: TextWidget(this.title,
-          color: props.textColor, fontSize: FontSizeCustom.normal),
-      onPressed: this.onPressed,
-    ));
-  }
+  // RaisedButton _buildButtonOutline(ButtonProps props) {
+  //   return (RaisedButton(
+  //     padding: this._buildButtonPadding(),
+  //     color: Colors.transparent,
+  //     shape: RoundedRectangleBorder(
+  //         borderRadius: BorderRadius.circular(BorderRadiusCustom.normal),
+  //         side: BorderSide(color: props.color)),
+  //     child: TextWidget(this.title,
+  //         color: props.textColor, fontSize: FontSizeCustom.normal),
+  //     onPressed: this.onPressed,
+  //   ));
+  // }
 
-  EdgeInsets _buildButtonPadding() {
-    switch (this.size) {
-      case EButtonSize.large:
-        return EdgeInsets.only(top: 25, bottom: 25, left: 30, right: 30);
-      case EButtonSize.small:
-        return EdgeInsets.only(top: 5, bottom: 5, left: 10, right: 10);
-      case EButtonSize.normal:
-      default:
-        return EdgeInsets.only(top: 15, bottom: 15, left: 20, right: 20);
-    }
-  }
+  // EdgeInsets _buildButtonPadding() {
+  //   switch (this.size) {
+  //     case ButtonSize.large:
+  //       return EdgeInsets.only(top: 25, bottom: 25, left: 30, right: 30);
+  //     case ButtonSize.small:
+  //       return EdgeInsets.only(top: 5, bottom: 5, left: 10, right: 10);
+  //     case ButtonSize.normal:
+  //     default:
+  //       return EdgeInsets.only(top: 15, bottom: 15, left: 20, right: 20);
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
-    final ButtonProps props = this._buildButtonProps();
-    switch (this.type) {
-      case EButtonType.outline_primary:
-      case EButtonType.outline_secondary:
-      case EButtonType.outline_tertiary:
-        return this._buildButtonOutline(props);
-      case EButtonType.primary:
-      case EButtonType.secondary:
-      default:
-        return this._buildButton(props);
-    }
+    // final ButtonProps props = this._buildButtonProps();
+    // switch (this.type) {
+    //   case ButtonType.outline_primary:
+    //   case ButtonType.outline_secondary:
+    //   case ButtonType.outline_tertiary:
+    //     return this._buildButtonOutline(props);
+    //   case ButtonType.primary:
+    //   case ButtonType.secondary:
+    //   default:
+    //     return this._buildButton(props);
+    // }
+
+    return ElevatedButton(onPressed: onPressed, child: TextWidget(child));
   }
 }
