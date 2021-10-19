@@ -1,4 +1,3 @@
-import 'package:safe_neighborhood/app/shared/config/padding_custom.dart';
 import 'package:flutter/material.dart';
 
 class ListTextWidget extends StatelessWidget {
@@ -6,30 +5,24 @@ class ListTextWidget extends StatelessWidget {
 
   const ListTextWidget(
     this.list, {
-    Key key,
-  });
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: this
-            .list
+        children: list
             .map((Widget item) => (Row(children: <Widget>[
                   Container(
                     alignment: Alignment.centerLeft,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                       shape: BoxShape.circle,
                     ),
-                    child: Text(' '),
+                    child: const Text(' '),
                   ),
-                  Expanded(
-                      child: PaddingContainerWidget(
-                    item,
-                    paddingBottom: PaddingCustom.none,
-                    paddingLeft: PaddingCustom.small,
-                  ))
+                  Expanded(child: item)
                 ])))
             .toList());
   }
