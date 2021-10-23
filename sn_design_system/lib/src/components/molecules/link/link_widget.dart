@@ -1,25 +1,23 @@
-import 'package:safe_neighborhood/app/shared/config/color_custom.dart';
-import 'package:safe_neighborhood/app/shared/config/font_size_custom.dart';
-import 'package:safe_neighborhood/app/shared/widgets/text/text_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:sn_design_system/src/components/atoms/text/text_widget.dart';
 
 class LinkWidget extends StatelessWidget {
   final String label;
   final Function onPressed;
 
-  const LinkWidget({Key key, @required this.label, @required this.onPressed})
-      : super(key: key);
+  const LinkWidget(this.label, this.onPressed, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
-        child: TextWidget(
-          this.label,
-          textAlign: TextAlign.center,
-          color: Color.linkColorColor,
-          fontSize: FontSizeCustom.small,
-          decoration: TextDecoration.underline,
-        ),
-        onPressed: this.onPressed);
+    // return FlatButton(
+    //     child: TextWidget(
+    //       label,
+    //       textAlign: TextAlign.center,
+    //       color: Color.linkColorColor,
+    //       fontSize: FontSizeCustom.small,
+    //       decoration: TextDecoration.underline,
+    //     ),
+    //     onPressed: this.onPressed);
+    return const TextWidget('LinkWidget');
   }
 }

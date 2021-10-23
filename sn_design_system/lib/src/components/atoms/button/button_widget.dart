@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:safe_neighborhood/src/components/atoms/text/text_widget.dart';
+import 'package:sn_design_system/src/components/atoms/text/text_widget.dart';
 
 enum ButtonType {
   primary,

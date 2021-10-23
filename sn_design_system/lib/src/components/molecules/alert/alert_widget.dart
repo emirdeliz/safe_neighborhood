@@ -1,7 +1,5 @@
-import 'package:safe_neighborhood/app/shared/config/color_custom.dart';
-import 'package:safe_neighborhood/app/shared/config/padding_custom.dart';
-import 'package:safe_neighborhood/app/shared/widgets/text/text_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:sn_design_system/src/components/atoms/text/text_widget.dart';
 
 class AlertWidget extends StatelessWidget {
   final String title;
@@ -10,39 +8,36 @@ class AlertWidget extends StatelessWidget {
   final Color backgroundColor;
   final bool disabled;
 
-  const AlertWidget(
-      {Key key,
-      this.title,
-      this.content,
-      this.buttonCloseTitle = 'Fechar',
-      this.backgroundColor,
-      this.disabled = false})
+  const AlertWidget(this.title, this.content, this.buttonCloseTitle,
+      this.backgroundColor, this.disabled,
+      {Key? key})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return AlertDialog(
-      title: TextWidget(this.title,
-          overflow: TextOverflow.fade, fontWeight: FontWeight.bold),
-      content: this.content,
-      backgroundColor:
-          this.disabled ? Color.disabledBackgroundColor : this.backgroundColor,
-      contentPadding: EdgeInsets.only(
-        top: PaddingCustom.normal,
-        right: PaddingCustom.normal,
-        bottom: PaddingCustom.none,
-        left: PaddingCustom.normal,
-      ),
-      actions: <Widget>[
-        FlatButton(
-          child: TextWidget(this.buttonCloseTitle),
-          onPressed: this.disabled
-              ? null
-              : () {
-                  Navigator.of(context).pop();
-                },
-        ),
-      ],
-    );
+    // return AlertDialog(
+    //   title: TextWidget(this.title,
+    //       overflow: TextOverflow.fade, fontWeight: FontWeight.bold),
+    //   content: this.content,
+    //   backgroundColor:
+    //       this.disabled ? Color.disabledBackgroundColor : this.backgroundColor,
+    //   contentPadding: EdgeInsets.only(
+    //     top: PaddingCustom.normal,
+    //     right: PaddingCustom.normal,
+    //     bottom: PaddingCustom.none,
+    //     left: PaddingCustom.normal,
+    //   ),
+    //   actions: <Widget>[
+    //     FlatButton(
+    //       child: TextWidget(this.buttonCloseTitle),
+    //       onPressed: this.disabled
+    //           ? null
+    //           : () {
+    //               Navigator.of(context).pop();
+    //             },
+    //     ),
+    //   ],
+    // );
+    return const TextWidget('Alert');
   }
 }

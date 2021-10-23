@@ -1,6 +1,7 @@
 name: sn_design_system
 description: A new Flutter package project.
 version: 0.0.1
+publish_to: none
 homepage:
 
 environment:
@@ -10,6 +11,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  dashbook: ^0.1.4
+  sn_theme:
+    path: ../sn_theme
 
 dev_dependencies:
   flutter_test:
