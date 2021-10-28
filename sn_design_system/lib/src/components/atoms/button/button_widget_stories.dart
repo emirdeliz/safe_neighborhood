@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:sn_design_system/src/components/atoms/button/button_widget.dart';
 
 void buildButtonStories(Dashbook dashbook) {
+  void onPressed() {}
   dashbook.storiesOf('Button').decorator(CenterDecorator()).add('default',
       (ctx) {
-    return const ButtonWidget('Hello world!', null);
+    return ButtonWidget('Hello world!', onPressed);
   });
 
   runApp(dashbook);

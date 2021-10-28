@@ -7,9 +7,9 @@ void buildListTextStories(Dashbook dashbook) {
   dashbook.storiesOf('ListText').decorator(CenterDecorator()).add('default',
       (ctx) {
     return const ListTextWidget([
-      TextWidget('Value 1'),
-      TextWidget('Value 2'),
-      TextWidget('Value 3'),
+      TextWidget('Value 1', key: Key('1')),
+      TextWidget('Value 2', key: Key('2')),
+      TextWidget('Value 3', key: Key('3'))
     ]);
   });
 

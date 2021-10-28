@@ -12,10 +12,14 @@ import 'package:sn_design_system/src/components/molecules/dropdown_button/dropdo
 import 'package:sn_design_system/src/components/molecules/loading/loading_widget_stories.dart';
 import 'package:sn_theme/sn_theme.dart';
 
+// flutter run -d chrome
+// flutter run -t lib/sn_design_system.dart
+
 void main() {
   final dashbook = Dashbook.dualTheme(
       light: SafeNeighborhoodTheme.lightTheme,
-      dark: SafeNeighborhoodTheme.darkTheme);
+      dark: SafeNeighborhoodTheme.darkTheme,
+      title: 'sn design system');
 
   // Atoms
   buildButtonStories(dashbook);

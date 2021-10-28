@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:safe_neighborhood/src/theme/color.dart';
+import 'package:sn_theme/sn_theme.dart';
 
 class SafeNeighborhoodTheme with ChangeNotifier {
-  static bool _isDarkTheme = true;
+  static bool _isDarkTheme = false;
   ThemeMode get currentTheme => _isDarkTheme ? ThemeMode.dark : ThemeMode.light;
 
   void toggleTheme() {
@@ -14,20 +14,14 @@ class SafeNeighborhoodTheme with ChangeNotifier {
     //1
     return ThemeData(
       //2
-      primaryColor: DarkColor.p1,
-      scaffoldBackgroundColor: DarkColor.n1,
-      // fontFamily: 'Montserrat', //3
-      // buttonTheme: ButtonThemeData( // 4
-      //   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18.0)),
-      //   buttonColor: CustomColors.lightPurple,
-      // )
+      primaryColor: LightColor.p1,
+      fontFamily: 'Montserrat', //3
     );
   }
 
   static ThemeData get darkTheme {
     return ThemeData(
       primaryColor: DarkColor.p1,
-      scaffoldBackgroundColor: DarkColor.n1,
       // buttonTheme: ButtonThemeData(
       //   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18.0)),
       //   buttonColor: CustomColors.lightPurple,
